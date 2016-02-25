@@ -27,6 +27,10 @@ function sti (name,rate,employeeNum, salary){
 		case 4: percent=1.06;
 		break;
 		case 5: percent=1.1;
+		break;
+		default:
+		  percent=1.0;
+		  break;
 	    }
 
 	    if(employeeNum.length==4){
@@ -49,7 +53,7 @@ function sti (name,rate,employeeNum, salary){
 }
 bonuses(employees);
 for(var i=0; i<bonusesArray.length;i++){
-	console.log("* ", bonusesArray[i][0],Math.round((100*bonusesArray[i][1]-100))+"%","$"+bonusesArray[i][2],"$"+bonusesArray[i][3]);
+	console.log("* ", bonusesArray[i][0]+":",Math.round((100*bonusesArray[i][1]-100))+"%","$"+bonusesArray[i][2],"$"+bonusesArray[i][3]);
 }
 
 
